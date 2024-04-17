@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import HireTalentModal from "./HireTalentModal";
+import SubmitResumeModal from "./SubmitResumeModal";
 
 const Hero = () => {
   return (
@@ -26,33 +27,8 @@ const Hero = () => {
               </p>
 
               <div className="mt-5 flex items-center gap-3 sm:gap-5">
-                <div>
-                  <div className="flex items-center gap-2 justify-center">
-                    <span className="block text-xl font-caveat text-center mb-1">
-                      for employer
-                    </span>
-                    <img
-                      src="../../../../images/home/curved-arrow.png"
-                      alt="Arrow"
-                      className="w-5 h-3"
-                    />
-                  </div>
-                  <Button>Hire A Talent</Button>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-2 justify-center">
-                    <span className="block text-xl font-caveat text-center mb-1">
-                      for jobseeker
-                    </span>
-                    <img
-                      src="../../../../images/home/curved-arrow.png"
-                      alt="Arrow"
-                      className="w-5 h-3"
-                    />
-                  </div>
-                  <Button variant="outline">Submit Resume</Button>
-                </div>
+                <HireTalentModal />
+                <SubmitResumeModal />
               </div>
             </div>
           </div>
