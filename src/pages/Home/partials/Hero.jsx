@@ -1,10 +1,26 @@
-import HireTalentModal from "./HireTalentModal";
-import SubmitResumeModal from "./SubmitResumeModal";
+import { Button } from "@/components/ui/button";
+import HireTalentModal from "./modals/HireTalentModal";
+import SubmitResumeModal from "./modals/SubmitResumeModal";
+
+const hireTalentModalTrigger = (
+  <>
+    <div className="flex items-center gap-2 justify-center">
+      <span className="block text-xl font-caveat text-center mb-1">
+        for employer
+      </span>
+      <img
+        src="../../../../images/home/curved-arrow.png"
+        alt="Arrow"
+        className="w-5 h-3"
+      />
+    </div>
+    <Button>Hire A Talent</Button>
+  </>
+);
 
 const Hero = () => {
   return (
     <>
-      {" "}
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
@@ -27,7 +43,7 @@ const Hero = () => {
               </p>
 
               <div className="mt-5 flex items-center gap-3 sm:gap-5">
-                <HireTalentModal />
+                <HireTalentModal modalTrigger={hireTalentModalTrigger} />
                 <SubmitResumeModal />
               </div>
             </div>

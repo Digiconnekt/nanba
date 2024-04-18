@@ -34,7 +34,7 @@ const index = () => {
     <>
       <footer className="bg-[#F8FAFC]">
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
-          <div className="grid grid-cols-12 gap-8">
+          <div className="grid grid-cols-12 gap-y-8 md:gap-8">
             <div className="col-span-12 md:col-span-12 lg:col-span-6">
               <div className="flex justify-center text-teal-600 sm:justify-start">
                 <NavLink to={"/"}>

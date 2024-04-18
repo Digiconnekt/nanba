@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Dialog,
   DialogClose,
@@ -14,23 +15,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { NavLink } from "react-router-dom";
 
-const HireTalentModal = () => {
+const HireTalentModal = ({ modalTrigger, triggerClass, selectedCategory }) => {
+  console.log("selectedCategory", selectedCategory);
+
   return (
     <>
       <Dialog>
-        <DialogTrigger>
-          <div className="flex items-center gap-2 justify-center">
-            <span className="block text-xl font-caveat text-center mb-1">
-              for employer
-            </span>
-            <img
-              src="../../../../images/home/curved-arrow.png"
-              alt="Arrow"
-              className="w-5 h-3"
-            />
-          </div>
-          <Button>Hire A Talent</Button>
-        </DialogTrigger>
+        <DialogTrigger className={triggerClass}>{modalTrigger}</DialogTrigger>
         <DialogContent className="max-w-3xl">
           <DialogHeader>
             <DialogTitle className="border-b pb-4 mb-4">
