@@ -60,7 +60,7 @@ const Categories = () => {
         <div className="grid grid-cols-12 gap-y-10 sm:gap-10 mt-10">
           {categoriesData.map((data, i) => (
             <div
-              className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-secondary rounded-xl cursor-pointer"
+              className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-secondary rounded-xl cursor-pointer group shadow-sm hover:shadow-none"
               key={i}
               onClick={() => setSelectedCategory(data.title)}
             >
@@ -69,16 +69,16 @@ const Categories = () => {
                 selectedCategory={selectedCategory}
                 modalTrigger={
                   <>
-                    <figure className="h-60">
+                    <figure className="h-60 overflow-hidden">
                       <img
                         src={`../../../../images/home/categories/${data.img}`}
                         alt={data.title}
-                        className="w-full h-full object-cover rounded-t-xl"
+                        className="w-full h-full object-cover rounded-t-xl group-hover:scale-110 transition-all ease-in-out"
                       />
                     </figure>
-                    <h2 className="my-5 px-2 text-md text-center text-white">
+                    <h4 className="my-5 px-2 text-md text-center text-white group-hover:text-gray-100">
                       {data.title}
-                    </h2>
+                    </h4>
                   </>
                 }
               />

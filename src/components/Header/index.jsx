@@ -6,12 +6,15 @@ import { Phone } from "lucide-react";
 const index = () => {
   return (
     <>
-      <header className="bg-white shadow-sm sticky top-0">
+      <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="mx-auto max-w-screen-xl px-4 py-2 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
-              <NavLink to={"/"}>
-                <img src="../../../images/logo-with-name.png" alt="Nanba" />
+              <NavLink to={"/"} className={"flex items-center"}>
+                <img src="../../../images/logo.png" alt="Nanba" />
+                <span className="text-gray-800 text-4xl mt-1 font-semibold">
+                  Nanba
+                </span>
               </NavLink>
             </div>
 

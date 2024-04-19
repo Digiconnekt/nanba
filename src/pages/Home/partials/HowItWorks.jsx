@@ -40,9 +40,9 @@ const HowItWorks = () => {
                     alt={data.title}
                   />
                 </figure>
-                <h2 className="mt-3 mb-2 text-xl font-semibold">
+                <h4 className="mt-3 mb-2 text-xl font-semibold">
                   {data.title}
-                </h2>
+                </h4>
                 <p className="text-md text-gray-500">{data.desc}</p>
               </div>
             ))}

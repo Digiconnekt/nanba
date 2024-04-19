@@ -28,7 +28,7 @@ const HireTalentModal = ({ modalTrigger, triggerClass, selectedCategory }) => {
               Hire A Talent
             </DialogTitle>
             <DialogDescription>
-              <div className="grid grid-cols-12 gap-5">
+              <form className="grid grid-cols-12 gap-5">
                 <div className="col-span-6">
                   <Input type="text" placeholder="Fullname *" />
                 </div>
@@ -76,9 +76,11 @@ const HireTalentModal = ({ modalTrigger, triggerClass, selectedCategory }) => {
                   </DialogClose>
                 </div>
                 <div className="col-span-6 mt-5">
-                  <Button className="w-full">Submit</Button>
+                  <Button className="w-full" type="button">
+                    Submit
+                  </Button>
                 </div>
-              </div>
+              </form>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
