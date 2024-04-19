@@ -5,7 +5,7 @@ const beginExpData = [
   {
     title: "Hire the right Candidate with Nanba",
     img: "hire-candidate.png",
-    bg: "#EC1563",
+    bg: "bg-[#EC1563]",
     trigger: (
       <Button className="bg-white text-[#EC1563] hover:bg-white/90">
         Hire A Talent
@@ -15,7 +15,7 @@ const beginExpData = [
   {
     title: "Free Service, We will build your resume",
     img: "build-resume.png",
-    bg: "#F4891F",
+    bg: "bg-[#F4891F]",
     trigger: (
       <Button className="bg-white text-[#F4891F] hover:bg-white/90">
         Reach Out
@@ -45,7 +45,7 @@ const BeginExp = () => {
         <div className="grid grid-cols-12 gap-y-10 sm:gap-10 mt-20">
           {beginExpData.map((data, i) => (
             <div
-              className={`col-span-12 md:col-span-6 bg-[${data.bg}] p-10 rounded-2xl h-60 relative flex items-center`}
+              className={`col-span-12 md:col-span-6 ${data.bg} p-10 rounded-2xl h-60 relative flex items-center`}
               key={i}
             >
               <div className="lg:max-w-[200px] xl:max-w-[300px] ">
