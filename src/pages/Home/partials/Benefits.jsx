@@ -94,7 +94,7 @@ const Benefits = () => {
                   </div>
                 </TabsContent>
                 <TabsContent value="for-skilled-workers">
-                  <div className="grid grid-cols-12 lg:gap-10 items-center border rounded-xl p-10">
+                  <div className="grid grid-cols-12 lg:gap-10 items-center border rounded-xl p-5 sm:p-10">
                     <ul className="col-span-12 lg:col-span-6">
                       {skilledWorkersData.map((data, i) => (
                         <li key={i} className="mb-5">
