@@ -1,3 +1,5 @@
+import { fadeInLeft, fadeInRight } from "@/helpers/framerMotionHelper";
+import { motion } from "framer-motion";
 import { Settings } from "lucide-react";
 
 const whyChooseUsData = [
@@ -14,15 +16,25 @@ const whyChooseUsData = [
 const WhyChooseUs = () => {
   return (
     <>
-      <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 overflow-hidden">
         <div className="grid grid-cols-12 gap-y-10 items-center md:gap-10">
-          <figure className="col-span-12 md:col-span-6 lg:col-span-4 mx-auto">
+          <motion.figure
+            className="col-span-12 md:col-span-6 lg:col-span-4 mx-auto"
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <img
               src={`../../../../images/home/why-choose-us.jpg`}
               alt="Why Choose Us"
             />
-          </figure>
-          <div className="col-span-12 md:col-span-6 lg:col-span-8">
+          </motion.figure>
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-8"
+            variants={fadeInRight()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <h2 className="text-3xl font-semibold mb-5">
               Why{" "}
               <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
@@ -46,7 +58,7 @@ const WhyChooseUs = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

@@ -1,3 +1,5 @@
+import { fadeInBottom } from "@/helpers/framerMotionHelper";
+import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
@@ -6,7 +8,12 @@ const ContactDetails = () => {
     <>
       <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
         <div className="grid grid-cols-12 gap-y-10 sm:gap-10">
-          <div className="col-span-12 sm:col-span-6 lg:col-span-4 border p-10 rounded-2xl shadow-sm flex flex-col justify-center">
+          <motion.div
+            className="col-span-12 sm:col-span-6 lg:col-span-4 border p-10 rounded-2xl shadow-sm flex flex-col justify-center"
+            variants={fadeInBottom()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <div className="bg-[#00BAC6] text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
               <MapPin />
             </div>
@@ -14,8 +21,13 @@ const ContactDetails = () => {
               N0 40, First cross, Thangammal Nagar, Ganapathy, Coimbatore -
               641006
             </p>
-          </div>
-          <div className="col-span-12 sm:col-span-6 lg:col-span-4 border p-10 rounded-2xl shadow-sm flex flex-col justify-center">
+          </motion.div>
+          <motion.div
+            className="col-span-12 sm:col-span-6 lg:col-span-4 border p-10 rounded-2xl shadow-sm flex flex-col justify-center"
+            variants={fadeInBottom()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <div className="bg-[#00BAC6] text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
               <Phone />
             </div>
@@ -25,8 +37,13 @@ const ContactDetails = () => {
             >
               +49 340 90020
             </NavLink>
-          </div>
-          <div className="col-span-12 sm:col-span-6 lg:col-span-4 border p-10 rounded-2xl shadow-sm flex flex-col justify-center">
+          </motion.div>
+          <motion.div
+            className="col-span-12 sm:col-span-6 lg:col-span-4 border p-10 rounded-2xl shadow-sm flex flex-col justify-center"
+            variants={fadeInBottom()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <div className="bg-[#00BAC6] text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
               <Mail />
             </div>
@@ -36,7 +53,7 @@ const ContactDetails = () => {
             >
               movin@nanba.co.in
             </NavLink>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

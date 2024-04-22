@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import HireTalentModal from "./modals/HireTalentModal";
+import { fadeInBottom } from "@/helpers/framerMotionHelper";
 
 const categoriesData = [
   {
@@ -49,7 +51,7 @@ const Categories = () => {
 
   return (
     <>
-      <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 overflow-hidden">
         <h2 className="text-3xl font-semibold text-center">
           Hire popular Categories
           <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
@@ -59,9 +61,12 @@ const Categories = () => {
         </h2>
         <div className="grid grid-cols-12 gap-y-10 sm:gap-10 mt-10">
           {categoriesData.map((data, i) => (
-            <div
+            <motion.div
               className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-secondary rounded-xl cursor-pointer group shadow-sm hover:shadow-none"
               key={i}
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
               onClick={() => setSelectedCategory(data.title)}
             >
               <HireTalentModal
@@ -82,7 +87,7 @@ const Categories = () => {
                   </>
                 }
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

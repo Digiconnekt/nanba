@@ -21,10 +21,6 @@ const supportLinks = [
     name: "Privacy Policy",
     link: "/privacy-policy",
   },
-  {
-    name: "Terms & Condition",
-    link: "/terms-and-condition",
-  },
 ];
 
 const index = () => {
@@ -39,7 +35,7 @@ const index = () => {
               <div className="flex justify-center text-teal-600 sm:justify-start">
                 <NavLink to={"/"} className={"flex items-center"}>
                   <img src="../../../images/logo.png" alt="Nanba" />
-                  <span className="text-gray-800 text-4xl mt-1 font-semibold">
+                  <span className="text-4xl mt-1 font-semibold bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
                     Nanba
                   </span>
                 </NavLink>

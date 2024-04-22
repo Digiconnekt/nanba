@@ -1,3 +1,6 @@
+import { fadeInBottom } from "@/helpers/framerMotionHelper";
+import { motion } from "framer-motion";
+
 const industriesData = [
   {
     title: "Construction & Engineering",
@@ -36,8 +39,8 @@ const industriesData = [
 const Industries = () => {
   return (
     <>
-      <section className="bg-[#E6F2F1]">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
+      <section className="bg-[#E6F2F1] overflow-hidden">
+        <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <h2 className="text-3xl font-semibold text-center">
             Popular
             <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
@@ -47,9 +50,12 @@ const Industries = () => {
           </h2>
           <div className="grid grid-cols-12 gap-y-10 sm:gap-10 mt-10">
             {industriesData.map((data, i) => (
-              <div
+              <motion.div
                 className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 border rounded-xl bg-white"
                 key={i}
+                variants={fadeInBottom()}
+                initial="hidden"
+                whileInView="visible"
               >
                 <div className="flex items-center p-5">
                   <figure className="">
@@ -63,7 +69,7 @@ const Industries = () => {
                     {data.title}
                   </h4>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

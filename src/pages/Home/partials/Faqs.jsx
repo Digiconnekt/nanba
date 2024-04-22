@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { fadeInLeft, fadeInRight } from "@/helpers/framerMotionHelper";
 
 const faqsData = [
   {
@@ -31,9 +33,14 @@ const faqsData = [
 const Faqs = () => {
   return (
     <>
-      <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 overflow-hidden">
         <div className="grid grid-cols-12 items-center gap-y-10 md:gap-10">
-          <div className="col-span-12 lg:col-span-6">
+          <motion.div
+            className="col-span-12 lg:col-span-6"
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <h2 className="text-3xl font-semibold mb-5">
               Frequently Asked{" "}
               <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
@@ -51,10 +58,15 @@ const Faqs = () => {
                 ))}
               </Accordion>
             </div>
-          </div>
-          <figure className="col-span-12 lg:col-span-6 mx-auto">
+          </motion.div>
+          <motion.figure
+            className="col-span-12 lg:col-span-6 mx-auto"
+            variants={fadeInRight()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <img src="../../../../images/home/faq.png" alt="Faqs" />
-          </figure>
+          </motion.figure>
         </div>
       </section>
     </>

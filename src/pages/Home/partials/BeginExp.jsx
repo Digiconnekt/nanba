@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import HireTalentModal from "./modals/HireTalentModal";
+import { fadeInLeft, fadeInRight } from "@/helpers/framerMotionHelper";
 
 const beginExpData = [
   {
@@ -7,8 +9,8 @@ const beginExpData = [
     img: "hire-candidate.png",
     bg: "bg-[#EC1563]",
     trigger: (
-      <Button className="bg-white text-[#EC1563] hover:bg-white/90">
-        Hire A Talent
+      <Button asChild className="bg-white text-[#EC1563] hover:bg-white/90">
+        <span>Hire A Talent</span>
       </Button>
     ),
   },
@@ -17,8 +19,8 @@ const beginExpData = [
     img: "build-resume.png",
     bg: "bg-[#F4891F]",
     trigger: (
-      <Button className="bg-white text-[#F4891F] hover:bg-white/90">
-        Reach Out
+      <Button asChild className="bg-white text-[#F4891F] hover:bg-white/90">
+        <span>Reach Out</span>
       </Button>
     ),
   },
@@ -27,7 +29,7 @@ const beginExpData = [
 const BeginExp = () => {
   return (
     <>
-      <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 overflow-hidden">
         <h2 className="text-3xl font-semibold text-center">
           Begin your
           <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
@@ -44,9 +46,12 @@ const BeginExp = () => {
         </h3>
         <div className="grid grid-cols-12 gap-y-10 sm:gap-10 mt-20">
           {beginExpData.map((data, i) => (
-            <div
+            <motion.div
               className={`col-span-12 md:col-span-6 ${data.bg} p-10 rounded-2xl h-60 relative flex items-center`}
               key={i}
+              variants={i === 0 ? fadeInLeft() : fadeInRight()}
+              initial="hidden"
+              whileInView="visible"
             >
               <div className="lg:max-w-[200px] xl:max-w-[300px] ">
                 <h4 className="text-white text-2xl mb-5">{data.title}</h4>
@@ -58,7 +63,7 @@ const BeginExp = () => {
                   alt={data.title}
                 />
               </figure>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

@@ -17,7 +17,7 @@ const ScrollToTop = () => {
     <>
       <div
         onClick={goToTop}
-        className="animate-bounce-slow fixed right-8 bottom-8 bg-primary w-12 h-12 flex flex-row justify-center items-center rounded-full shadow-xl cursor-pointer z-50"
+        className="animate-bounce fixed right-8 bottom-8 bg-primary w-12 h-12 flex flex-row justify-center items-center rounded-full shadow-xl cursor-pointer z-50"
       >
         <ChevronUp className="text-3xl text-white" />
       </div>

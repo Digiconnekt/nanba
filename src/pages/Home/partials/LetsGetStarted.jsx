@@ -1,14 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
+import { fadeInLeft } from "@/helpers/framerMotionHelper";
 
 const LetsGetStarted = () => {
   return (
     <>
-      <section className="bg-[#E6F2F1]">
-        <div className="relative mx-auto max-w-screen-xl px-4 pt-8 sm:px-6 sm:pt-12 lg:px-8 lg:pt-24 pb-12 md:pb-56 lg:pb-24">
-          <div className="max-w-lg">
+      <section className="bg-[#E6F2F1] overflow-hidden">
+        <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <motion.div
+            className="max-w-lg"
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <h2 className="text-3xl font-semibold text-black">
               Let's Get Started!
             </h2>
@@ -19,7 +26,7 @@ const LetsGetStarted = () => {
             <Button asChild>
               <NavLink to={"/contact"}>Contact Us</NavLink>
             </Button>
-          </div>
+          </motion.div>
           <figure className="hidden md:block absolute bottom-0 right-0">
             <img
               src="../../../../images/home/let-get-started.png"

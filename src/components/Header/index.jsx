@@ -12,7 +12,7 @@ const index = () => {
             <div className="md:flex md:items-center md:gap-12">
               <NavLink to={"/"} className={"flex items-center"}>
                 <img src="../../../images/logo.png" alt="Nanba" />
-                <span className="text-gray-800 text-4xl mt-1 font-semibold">
+                <span className="text-4xl mt-1 font-semibold bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
                   Nanba
                 </span>
               </NavLink>

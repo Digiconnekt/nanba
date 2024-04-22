@@ -34,7 +34,7 @@ const customerSaysData = [
 const CustomerSays = () => {
   return (
     <>
-      <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 overflow-hidden">
         <h2 className="text-3xl font-semibold text-center text-black">
           What Our
           <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">

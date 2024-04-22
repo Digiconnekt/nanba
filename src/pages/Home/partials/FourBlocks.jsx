@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import HireTalentModal from "./modals/HireTalentModal";
+import { fadeInBottom } from "@/helpers/framerMotionHelper";
 
 const FourBlocksData = [
   {
@@ -36,12 +38,15 @@ const FourBlocks = () => {
 
   return (
     <>
-      <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
-        <div className="grid grid-cols-12 gap-y-10 md:gap-10">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 overflow-hidden">
+        <div className="grid grid-cols-12 gap-y-10 sm:gap-10">
           {FourBlocksData.map((data, i) => (
-            <div
+            <motion.div
               className="col-span-12 sm:col-span-6 lg:col-span-3 flex flex-col justify-between"
               key={i}
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
             >
               <div>
                 <figure>
@@ -56,7 +61,7 @@ const FourBlocks = () => {
                 <p className="text-md text-gray-500">{data.desc}</p>
               </div>
               <HireTalentModal modalTrigger={hireTalentModalTrigger} />
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
