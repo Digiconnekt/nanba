@@ -42,11 +42,8 @@ const index = () => {
               </div>
 
               <p className="mt-6 sm:max-w-lg text-center leading-relaxed text-gray-500 sm:text-left">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                voluptatem tempore accusamus odio, amet beatae ducimus quos.
-                Quasi numquam sapiente ipsum error possimus asperiores, iste at
-                sequi nobis, corporis exercitationem vel magnam commodi ad hic
-                sit mollitia temporibus, qui ipsa libero consectetur!
+                We help businesses of every size experiences across email and
+                other owned channels.
               </p>
 
               <ul className="mt-8 flex justify-center gap-6 sm:justify-start">
