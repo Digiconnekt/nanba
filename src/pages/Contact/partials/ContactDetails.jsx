@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const ContactDetails = () => {
   return (
     <>
-      <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24">
+      <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24 overflow-hidden">
         <div className="grid grid-cols-12 gap-y-10 sm:gap-10">
           <motion.div
             className="col-span-12 sm:col-span-6 lg:col-span-4 border p-10 rounded-2xl shadow-sm flex flex-col justify-center"
