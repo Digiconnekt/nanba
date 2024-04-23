@@ -21,12 +21,12 @@ const index = () => {
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
                 <Button variant="outline" asChild className="hidden sm:block">
-                  <NavLink to={"tel:+9999999999"} target="_blank">
+                  <NavLink to={"tel:+918148466924"} target="_blank">
                     <Phone size={18} />
                   </NavLink>
                 </Button>
                 <Button variant="outline" asChild className="hidden sm:block">
-                  <NavLink to={"https://wa.me/+9999999999"} target="_blank">
+                  <NavLink to={"https://wa.me/+918148466924"} target="_blank">
                     <FaWhatsapp size={20} />
                   </NavLink>
                 </Button>

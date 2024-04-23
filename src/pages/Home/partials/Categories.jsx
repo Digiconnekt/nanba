@@ -59,10 +59,10 @@ const Categories = () => {
             Skilled Workers
           </span>
         </h2>
-        <div className="grid grid-cols-12 gap-y-10 sm:gap-10 mt-10">
+        <div className="grid grid-cols-12 lg:grid-cols-5 gap-5 sm:gap-5 mt-10">
           {categoriesData.map((data, i) => (
             <motion.div
-              className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-secondary rounded-xl cursor-pointer group shadow-sm hover:shadow-none"
+              className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-1 bg-secondary rounded-xl cursor-pointer group shadow-sm hover:shadow-none"
               key={i}
               variants={fadeInBottom()}
               initial="hidden"
@@ -74,14 +74,14 @@ const Categories = () => {
                 selectedCategory={selectedCategory}
                 modalTrigger={
                   <>
-                    <figure className="h-60 overflow-hidden">
+                    <figure className="h-44 overflow-hidden">
                       <img
                         src={`../../../../images/home/categories/${data.img}`}
                         alt={data.title}
                         className="w-full h-full object-cover rounded-t-xl group-hover:scale-110 transition-all ease-in-out"
                       />
                     </figure>
-                    <h4 className="my-5 px-2 text-md text-center text-white group-hover:text-gray-100">
+                    <h4 className="my-5 px-2 text-sm sm:text-md text-center text-white group-hover:text-gray-100">
                       {data.title}
                     </h4>
                   </>

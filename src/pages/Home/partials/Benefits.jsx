@@ -41,7 +41,7 @@ const Benefits = () => {
         {/* engineer bg */}
         <figure className="hidden lg:block h-[600px]">
           <img
-            src="../../../../images/home/engineer-bg.png"
+            src="../../../../images/home/benefits/benefits-bg.jpg"
             alt="Enginner bg"
             className="w-full h-full object-cover"
           />

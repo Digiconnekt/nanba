@@ -1,18 +1,22 @@
 import { NavLink } from "react-router-dom";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const socialMediaLinks = [
   {
     icon: Facebook,
-    link: "/facebook",
+    link: "https://www.facebook.com/profile.php?id=61559012691667",
   },
   {
     icon: Instagram,
-    link: "/instagram",
+    link: "https://www.instagram.com/nanbajobs?utm_source=qr&igsh=cTNqeW5vcXFrN3h0",
   },
   {
     icon: Linkedin,
-    link: "/linkedin",
+    link: "https://www.linkedin.com/company/nanba.co.in/",
+  },
+  {
+    icon: Youtube,
+    link: "https://youtube.com/@NANBA-fz8kn?si=_gmWpnV4wh5hib6p",
   },
 ];
 
@@ -42,15 +46,14 @@ const index = () => {
               </div>
 
               <p className="mt-6 sm:max-w-lg text-center leading-relaxed text-gray-500 sm:text-left">
-                We help businesses of every size experiences across email and
-                other owned channels.
+                Follow us on social media
               </p>
 
-              <ul className="mt-8 flex justify-center gap-6 sm:justify-start">
+              <ul className="mt-3 flex justify-center gap-6 sm:justify-start">
                 {socialMediaLinks.map((link, i) => (
                   <li key={i}>
                     <NavLink
-                      to={link.icon}
+                      to={link.link}
                       rel="noreferrer"
                       target="_blank"
                       className="text-primary transition hover:text-primary/75"

@@ -1,7 +1,7 @@
-import { fadeInBottom } from "@/helpers/framerMotionHelper";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { fadeInBottom } from "@/helpers/framerMotionHelper";
 
 const ContactDetails = () => {
   return (
@@ -14,7 +14,7 @@ const ContactDetails = () => {
             initial="hidden"
             whileInView="visible"
           >
-            <div className="bg-[#00BAC6] text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
+            <div className="bg-primary text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
               <MapPin />
             </div>
             <p className="text-center text-gray-500">
@@ -28,14 +28,14 @@ const ContactDetails = () => {
             initial="hidden"
             whileInView="visible"
           >
-            <div className="bg-[#00BAC6] text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
+            <div className="bg-primary text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
               <Phone />
             </div>
             <NavLink
-              to={"tel:+4934090020"}
+              to={"tel:+918148466924"}
               className="block text-center text-gray-500 hover:text-primary"
             >
-              +49 340 90020
+              +91 81484 66924
             </NavLink>
           </motion.div>
           <motion.div
@@ -44,7 +44,7 @@ const ContactDetails = () => {
             initial="hidden"
             whileInView="visible"
           >
-            <div className="bg-[#00BAC6] text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
+            <div className="bg-primary text-white mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-5">
               <Mail />
             </div>
             <NavLink
