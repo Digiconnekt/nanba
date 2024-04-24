@@ -96,7 +96,10 @@ const HireTalentModal = ({ modalTrigger, triggerClass, selectedCategory }) => {
         <DialogContent className="max-w-3xl">
           <DialogHeader>
             <DialogTitle className="border-b pb-4 mb-4">
-              Hire A Talent
+              Hire A Talent{" "}
+              <span className="text-gray-600 font-normal">
+                {selectedCategory && `- ${selectedCategory}`}
+              </span>
             </DialogTitle>
             <form
               className="grid grid-cols-12 gap-5 items-end"

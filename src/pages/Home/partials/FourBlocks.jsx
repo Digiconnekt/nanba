@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import HireTalentModal from "./modals/HireTalentModal";
 import { fadeInBottom } from "@/helpers/framerMotionHelper";
+import { useState } from "react";
 
 const FourBlocksData = [
   {
@@ -27,14 +28,7 @@ const FourBlocksData = [
 ];
 
 const FourBlocks = () => {
-  const hireTalentModalTrigger = (
-    <>
-      <p className="mt-3 text-secondary text-sm flex items-center hover:font-semibold transition-all ease-in-out">
-        Submit requirement
-        <MoveRight size={18} className="ms-2" />
-      </p>
-    </>
-  );
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   return (
     <>
@@ -60,7 +54,18 @@ const FourBlocks = () => {
                 </h2>
                 <p className="text-md text-gray-500">{data.desc}</p>
               </div>
-              <HireTalentModal modalTrigger={hireTalentModalTrigger} />
+              <HireTalentModal
+                selectedCategory={selectedCategory}
+                modalTrigger={
+                  <p
+                    className="mt-3 text-secondary text-sm flex items-center hover:font-semibold transition-all ease-in-out"
+                    onClick={() => setSelectedCategory(data.title)}
+                  >
+                    Submit requirement
+                    <MoveRight size={18} className="ms-2" />
+                  </p>
+                }
+              />
             </motion.div>
           ))}
         </div>
