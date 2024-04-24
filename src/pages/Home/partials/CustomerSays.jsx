@@ -22,7 +22,7 @@ const customerSaysData = [
       "The platform's rigorous screening process ensured that we were presented with highly qualified and experienced technical professionals.",
   },
   {
-    img: "saranya.png",
+    img: "meriton-logo.png",
     name: "Saranya",
     designation: "Meriton Technologies,HR",
     title: "I recommend Nanba",
@@ -72,10 +72,11 @@ const CustomerSays = () => {
           {customerSaysData.map((data, i) => (
             <SwiperSlide key={i}>
               <div className="flex items-center gap-5 mb-5">
-                <figure>
+                <figure className="w-16 h-16">
                   <img
                     src={`../../../../images/home/customer-says/${data.img}`}
                     alt={data.name}
+                    className="h-full w-full object-cover"
                   />
                 </figure>
                 <div className="flex-1">
