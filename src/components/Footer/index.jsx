@@ -89,7 +89,7 @@ const index = () => {
                 <p className="text-lg font-medium text-gray-900">Address</p>
 
                 <p className="mt-8 space-y-4 text-md">
-                  N0 40, First cross, Thangammal Nagar, Ganapathy, Coimbatore -
+                  No 40, First cross, Thangammal Nagar, Ganapathy, Coimbatore -
                   641006
                 </p>
               </div>

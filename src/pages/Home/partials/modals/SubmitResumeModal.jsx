@@ -7,16 +7,30 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+import * as Yup from "yup";
+import useMail from "@/helpers/sendMail";
+import { NavLink } from "react-router-dom";
+import { LoaderCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import useFileUpload from "@/helpers/fileUpload";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import useMail from "@/helpers/sendMail";
-import { LoaderCircle } from "lucide-react";
-import useFileUpload from "@/helpers/fileUpload";
+
+const validationSchema = Yup.object({
+  fullName: Yup.string()
+    .matches(
+      /^[A-Za-z\s]+$/,
+      "fullname must contain only alphabetic characters"
+    )
+    .required("fullname is required"),
+  email: Yup.string()
+    .email("must be a valid email")
+    .required("email is required"),
+  mobile: Yup.number().required("mobile is required"),
+});
 
 const SubmitResumeModal = () => {
   const { isLoading, data, sendMailReq } = useMail();
@@ -36,16 +50,26 @@ const SubmitResumeModal = () => {
     message: "",
   });
   const [file, setFile] = useState("");
+  const [validationErrors, setValidationErrors] = useState(null);
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+
+    if (name === "fullName") {
+      const sanitizedValue = value.replace(/[^A-Za-z\s]/g, "");
+      setFormData((prevData) => ({
+        ...prevData,
+        fullName: sanitizedValue,
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
 
     const templateData = {
@@ -57,10 +81,21 @@ const SubmitResumeModal = () => {
       subject: "Submit Resume",
     };
 
-    sendMailReq(
-      templateData,
-      import.meta.env.VITE_APP_EMAIL_JS_TEMPLATE_ID_MODAL
-    );
+    try {
+      await validationSchema.validate(formData, { abortEarly: false });
+      sendMailReq(
+        templateData,
+        import.meta.env.VITE_APP_EMAIL_JS_TEMPLATE_ID_MODAL
+      );
+    } catch (error) {
+      if (error instanceof Yup.ValidationError) {
+        const errors = {};
+        error.inner.forEach((err) => {
+          errors[err.path] = err.message;
+        });
+        setValidationErrors(errors);
+      }
+    }
   };
 
   useEffect(() => {
@@ -76,6 +111,8 @@ const SubmitResumeModal = () => {
         file: "",
         message: "",
       });
+
+      setValidationErrors(null);
     }
   }, [data]);
 
@@ -122,10 +159,14 @@ const SubmitResumeModal = () => {
                   type="text"
                   placeholder="Fullname *"
                   name="fullName"
-                  value={formData.fullname}
+                  value={formData.fullName}
                   onChange={onChangeHandler}
-                  required
                 />
+                {validationErrors?.fullName && (
+                  <span className="text-xs text-red-500">
+                    {validationErrors?.fullName}
+                  </span>
+                )}
               </div>
               <div className="col-span-6">
                 <Input
@@ -134,18 +175,26 @@ const SubmitResumeModal = () => {
                   name="email"
                   value={formData.email}
                   onChange={onChangeHandler}
-                  required
                 />
+                {validationErrors?.email && (
+                  <span className="text-xs text-red-500">
+                    {validationErrors?.email}
+                  </span>
+                )}
               </div>
               <div className="col-span-12">
                 <Input
-                  type="text"
+                  type="number"
                   placeholder="Mobile *"
                   name="mobile"
                   value={formData.mobile}
                   onChange={onChangeHandler}
-                  required
                 />
+                {validationErrors?.mobile && (
+                  <span className="text-xs text-red-500">
+                    {validationErrors?.mobile}
+                  </span>
+                )}
               </div>
               <div className="col-span-8">
                 <Label htmlFor="jd" className="text-xs">
@@ -181,7 +230,7 @@ const SubmitResumeModal = () => {
               </div>
               <div className="col-span-12">
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="terms" required />
+                  <Checkbox id="terms" checked />
                   <label
                     htmlFor="terms"
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
