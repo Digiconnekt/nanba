@@ -16,13 +16,9 @@ const LetsGetStarted = () => {
             initial="hidden"
             whileInView="visible"
           >
-            <h2 className="text-3xl font-semibold text-black">
+            <h2 className="text-3xl font-semibold text-black mb-3">
               Let's Get Started!
             </h2>
-            <h3 className="text-lg text-gray-500 my-3">
-              Nanba caters to a wider range of workforce needs than typical
-              recruitment platforms, offering solutions for full-time,
-            </h3>
             <Button asChild>
               <NavLink to={"/contact"}>Contact Us</NavLink>
             </Button>

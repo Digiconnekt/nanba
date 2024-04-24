@@ -10,7 +10,7 @@ import { fadeInLeft, fadeInRight } from "@/helpers/framerMotionHelper";
 const faqsData = [
   {
     que: "What types of workers can I hire through Nanba?",
-    ans: "Nanba caters to a wide range of industries and job roles, including retail sales executives, engineers, cashiers, welders, machine operators, electricians, and more. Whether you're in construction, manufacturing, hospitality, or any other sector, Nanba has the talent you need.",
+    ans: "Nanba caters to a wide range of industries and job roles, including engineers, welders, machine operators, electricians, and more. Whether you're in construction, manufacturing, hospitality, or any other sector, Nanba has the talent you need.",
   },
   {
     que: "Is Nanba only for businesses?",

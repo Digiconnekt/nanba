@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const cardsData = [
   {
     icon: "icon-1.png",
-    title: "Subit your requirement",
+    title: "Submit your requirement",
     desc: "Share your specific requirements by clicking on the 'Submit Requirement' option",
   },
   {
