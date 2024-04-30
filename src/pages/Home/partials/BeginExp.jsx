@@ -8,21 +8,15 @@ const beginExpData = [
     title: "Hire the right Candidate with Nanba",
     img: "hire-candidate.png",
     bg: "bg-[#EC1563]",
-    trigger: (
-      <Button asChild className="bg-white text-[#EC1563] hover:bg-white/90">
-        <span>Hire A Talent</span>
-      </Button>
-    ),
+    btnText: "Hire A Talent",
+    resumeBuilder: false,
   },
   {
     title: "Free Service, We will build your resume",
     img: "build-resume.png",
     bg: "bg-[#F4891F]",
-    trigger: (
-      <Button asChild className="bg-white text-[#F4891F] hover:bg-white/90">
-        <span>Reach Out</span>
-      </Button>
-    ),
+    btnText: "Reach Out",
+    resumeBuilder: true,
   },
 ];
 
@@ -55,7 +49,17 @@ const BeginExp = () => {
             >
               <div className="lg:max-w-[200px] xl:max-w-[300px] ">
                 <h4 className="text-white text-2xl mb-5">{data.title}</h4>
-                <HireTalentModal modalTrigger={data.trigger} />
+                <HireTalentModal
+                  resumeBuilder={data.resumeBuilder}
+                  modalTrigger={
+                    <Button
+                      asChild
+                      className="bg-white text-[#F4891F] hover:bg-white/90"
+                    >
+                      <span>{data.btnText}</span>
+                    </Button>
+                  }
+                />
               </div>
               <figure className="hidden lg:block absolute right-5 bottom-0">
                 <img

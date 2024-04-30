@@ -33,7 +33,12 @@ const validationSchema = Yup.object({
   message: Yup.string().required("message is required"),
 });
 
-const HireTalentModal = ({ modalTrigger, triggerClass, selectedCategory }) => {
+const HireTalentModal = ({
+  modalTrigger,
+  triggerClass,
+  selectedCategory,
+  resumeBuilder = false,
+}) => {
   const { isLoading, data, sendMailReq } = useMail();
   const {
     isLoading: isLoadingFileUpload,
@@ -134,7 +139,7 @@ const HireTalentModal = ({ modalTrigger, triggerClass, selectedCategory }) => {
         <DialogContent className="max-w-3xl">
           <DialogHeader>
             <DialogTitle className="border-b pb-4 mb-4">
-              Hire A Talent{" "}
+              {resumeBuilder ? "Resume Builder" : "Hire A Talent"}
               <span className="text-gray-600 font-normal">
                 {selectedCategory && `- ${selectedCategory}`}
               </span>
@@ -182,33 +187,41 @@ const HireTalentModal = ({ modalTrigger, triggerClass, selectedCategory }) => {
                   </span>
                 )}
               </div>
-              <div className="col-span-8">
-                <Label htmlFor="jd" className="text-xs">
-                  Attach JD file here
-                </Label>
-                <Input
-                  type="file"
-                  id="jd"
-                  className="mt-1"
-                  onChange={(e) => setFile(e.target.files[0])}
-                />
-              </div>
-              <div className="col-span-4 mt-7">
-                <Button
-                  className="w-full"
-                  type="button"
-                  disabled={isLoadingFileUpload || !file}
-                  onClick={() => fileUploadReq(file)}
-                >
-                  Upload
-                  {isLoadingFileUpload && (
-                    <LoaderCircle className="animate-spin ms-2" size={20} />
-                  )}
-                </Button>
-              </div>
+              {!resumeBuilder && (
+                <>
+                  <div className="col-span-8">
+                    <Label htmlFor="jd" className="text-xs">
+                      Attach JD file here
+                    </Label>
+                    <Input
+                      type="file"
+                      id="jd"
+                      className="mt-1"
+                      onChange={(e) => setFile(e.target.files[0])}
+                    />
+                  </div>
+                  <div className="col-span-4 mt-7">
+                    <Button
+                      className="w-full"
+                      type="button"
+                      disabled={isLoadingFileUpload || !file}
+                      onClick={() => fileUploadReq(file)}
+                    >
+                      Upload
+                      {isLoadingFileUpload && (
+                        <LoaderCircle className="animate-spin ms-2" size={20} />
+                      )}
+                    </Button>
+                  </div>
+                </>
+              )}
               <div className="col-span-12">
                 <Textarea
-                  placeholder="write your job requirement here *"
+                  placeholder={
+                    resumeBuilder
+                      ? "write a brief about yourself"
+                      : "write your job requirement here *"
+                  }
                   name="message"
                   value={formData.message}
                   onChange={onChangeHandler}
