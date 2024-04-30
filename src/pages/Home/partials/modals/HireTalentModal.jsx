@@ -85,7 +85,7 @@ const HireTalentModal = ({
       file: formData.file,
       message: formData.message,
       category: selectedCategory,
-      subject: "Hire A Talent",
+      subject: resumeBuilder ? "Resume Builder" : "Hire A Talent",
     };
 
     try {
