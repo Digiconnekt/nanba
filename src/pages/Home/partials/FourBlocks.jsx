@@ -23,7 +23,7 @@ const FourBlocksData = [
   {
     icon: "icon-4.png",
     title: "Projects based Hires",
-    desc: "Whether you're launching a new outlet, expanding operations, or undertaking a special project, Nanba provides tailored manpower solutions.",
+    desc: "Whether you're launching a new outlet, expanding operations, or undertaking a special project, Nanba Jobs provides tailored manpower solutions.",
   },
 ];
 

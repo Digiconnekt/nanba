@@ -48,11 +48,11 @@ const index = () => {
           </li>
           <li className="mt-1 text-gray-500">
             Person interested in engaging with business relationships with Nanba
-            and other recipients of our services.
+            Jobs and other recipients of our services.
           </li>
           <li className="mt-1 text-gray-500">
             Clients, who are the people who engage or show willingness to engage
-            the Talent from the Talent pool as provided by Nanba.
+            the Talent from the Talent pool as provided by Nanba Jobs.
           </li>
           <li className="mt-1 text-gray-500">
             Talent, who are people we source or place on assignment with one of
@@ -120,8 +120,8 @@ const index = () => {
           provided us with Personal Information, we will use commercially
           reasonable efforts to delete such information from our files. If you
           are the parent or legal guardian of a child younger than age 18 and
-          believe that Nanba has collected Personal Information from your child,
-          please contact us at the provided email address below.
+          believe that Nanba Jobs has collected Personal Information from your
+          child, please contact us at the provided email address below.
         </p>
         <p className="mt-5 text-gray-500">
           Third parties may also give us information about you. If we combine
@@ -286,7 +286,7 @@ const index = () => {
           <li className="mt-1 text-gray-500">
             Usage can be also as per the request received from the Client.
             However the discretion as to such specific requests shall solely be
-            of Nanba; and
+            of Nanba Jobs; and
           </li>
           <li className="mt-1 text-gray-500">
             All other purposes related to our business.
@@ -335,9 +335,9 @@ const index = () => {
         </p>
         <p className="mt-5 text-gray-500">
           We collect feedback from Users about their experience with other Nanba
-          Users of our Service. Please note that any feedback you provide via
-          the Service or feedback provided about you is publicly viewable via
-          the Service.
+          Jobs Users of our Service. Please note that any feedback you provide
+          via the Service or feedback provided about you is publicly viewable
+          via the Service.
         </p>
         <p className="mt-5 text-gray-500">
           We will cease to retain personal data, as soon as it is reasonable to

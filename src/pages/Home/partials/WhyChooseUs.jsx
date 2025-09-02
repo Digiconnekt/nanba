@@ -37,15 +37,15 @@ const WhyChooseUs = () => {
           >
             <h2 className="text-3xl font-semibold mb-5">
               Why{" "}
-              <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
+              <span className="bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
                 {" "}
                 Choose Us
               </span>
             </h2>
             <h3 className="text-lg text-gray-400">
-              Nanba efficiently connects you to a network of pre-vetted, highly
-              skilled professionals.Here are just a few reasons why Nanba stands
-              out
+              Nanba Jobs efficiently connects you to a network of pre-vetted,
+              highly skilled professionals.Here are just a few reasons why Nanba
+              stands out
             </h3>
             <ul className="mt-5">
               {whyChooseUsData.map((data, i) => (

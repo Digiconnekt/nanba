@@ -22,7 +22,7 @@ const cardsData = [
 const HowItWorks = () => {
   return (
     <>
-      <section className="bg-gradient-to-r from-[#ED4882] to-[#FFC34B] overflow-hidden">
+      <section className="bg-gradient-to-r from-primary to-secondary overflow-hidden">
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <h2 className="text-3xl font-semibold text-center text-white">
             How It Works

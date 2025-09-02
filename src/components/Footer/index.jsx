@@ -43,7 +43,7 @@ const index = () => {
                 >
                   <img
                     src="/images/nanba-logo.png"
-                    alt="Nanba"
+                    alt="Nanba Jobs"
                     className="w-full h-full mix-blend-multiply"
                   />
                 </NavLink>
@@ -107,7 +107,7 @@ const index = () => {
               </p>
 
               <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
-                &copy; {currentYear} Nanba
+                &copy; {currentYear} Nanba Jobs
               </p>
             </div>
           </div>

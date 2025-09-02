@@ -8,15 +8,15 @@ const index = () => {
     <>
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="mx-auto max-w-screen-xl px-4 py-2 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
               <NavLink
                 to={"/"}
-                className={"flex items-center max-w-[150px] w-full h-[70px]"}
+                className={"flex items-center max-w-[150px] w-full h-[100px]"}
               >
                 <img
                   src="/images/nanba-logo.png"
-                  alt="Nanba"
+                  alt="Nanba Jobs"
                   className="w-full h-full mix-blend-multiply"
                 />
               </NavLink>

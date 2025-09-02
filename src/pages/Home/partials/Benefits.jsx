@@ -7,30 +7,30 @@ import { fadeInBottom } from "@/helpers/framerMotionHelper";
 const employersData = [
   {
     title: "Cater to specific needs",
-    desc: "Nanba caters to a wider range of workforce needs than typical recruitment platforms, offering solutions for full-time, seasonal, temporary, and project-based hires. This allows businesses to address staffing fluctuations and seasonal demands more effectively.",
+    desc: "Nanba Jobs caters to a wider range of workforce needs than typical recruitment platforms, offering solutions for full-time, seasonal, temporary, and project-based hires. This allows businesses to address staffing fluctuations and seasonal demands more effectively.",
   },
   {
     title: "Focus on fit, not just skills",
-    desc: "Nanba's pre-vetting process goes beyond just skills, ensuring a good cultural fit between workers and businesses. This can lead to increased worker satisfaction, improved retention, and a more positive work environment.",
+    desc: "Nanba's Jobs pre-vetting process goes beyond just skills, ensuring a good cultural fit between workers and businesses. This can lead to increased worker satisfaction, improved retention, and a more positive work environment.",
   },
   {
     title: "Reduced Costs",
-    desc: "Save on recruitment and advertising expenses by utilizing Nanba's flexible platform.",
+    desc: "Save on recruitment and advertising expenses by utilizing Nanba's Jobs flexible platform.",
   },
 ];
 
 const skilledWorkersData = [
   {
     title: "Flexibility",
-    desc: "Nanba offers flexible employment options, including temporary, part-time, full-time, and project-based roles, allowing employees to choose work arrangements that suit their preferences and lifestyle.",
+    desc: "Nanba Jobs offers flexible employment options, including temporary, part-time, full-time, and project-based roles, allowing employees to choose work arrangements that suit their preferences and lifestyle.",
   },
   {
     title: "Professional Growth",
-    desc: "Employees can enhance their skills and experience by working on diverse projects and assignments through Nanba, fostering continuous professional growth and development.",
+    desc: "Employees can enhance their skills and experience by working on diverse projects and assignments through Nanba Jobs, fostering continuous professional growth and development.",
   },
   {
     title: "Community Support",
-    desc: "Nanba fosters a supportive online community where skilled professionals can connect, share experiences, and build meaningful connections.",
+    desc: "Nanba Jobs fosters a supportive online community where skilled professionals can connect, share experiences, and build meaningful connections.",
   },
 ];
 
@@ -58,9 +58,9 @@ const Benefits = () => {
             <div className="bg-white rounded-2xl max-w-5xl xl:max-w-screen-xl mx-auto p-10">
               <h2 className="text-3xl font-semibold text-center mb-5">
                 Benefits Of
-                <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
+                <span className="bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
                   {" "}
-                  Nanba
+                  Nanba Jobs
                 </span>
               </h2>
               <Tabs defaultValue="for-employers" className="w-full">

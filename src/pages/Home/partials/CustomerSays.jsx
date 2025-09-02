@@ -11,7 +11,7 @@ const customerSaysData = [
     designation: "Buildnetic, Founder",
     title: "Customized Solution",
     message:
-      "We were facing a staffing challenge and weren't sure where to turn. Nanba came in with a customized solution and their expertise made the process seamless. We highly recommend them!",
+      "We were facing a staffing challenge and weren't sure where to turn. Nanba Jobs came in with a customized solution and their expertise made the process seamless. We highly recommend them!",
   },
   {
     img: "parthibhan.png",
@@ -25,9 +25,9 @@ const customerSaysData = [
     img: "meriton-logo.png",
     name: "Saranya",
     designation: "Meriton Technologies,HR",
-    title: "I recommend Nanba",
+    title: "I recommend Nanba Jobs",
     message:
-      "I highly recommend Nanba for both employers and job seekers. They have a great pool of talent and are very efficient in the matching process.",
+      "I highly recommend Nanba Jobs for both employers and job seekers. They have a great pool of talent and are very efficient in the matching process.",
   },
 ];
 
@@ -37,7 +37,7 @@ const CustomerSays = () => {
       <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 overflow-hidden">
         <h2 className="text-3xl font-semibold text-center text-black">
           What Our
-          <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
+          <span className="bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
             {" "}
             Customers Says
           </span>

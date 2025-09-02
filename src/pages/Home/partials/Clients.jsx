@@ -40,7 +40,7 @@ const Clients = () => {
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <h2 className="text-3xl font-semibold text-center mb-5">
             Trusted By Top{" "}
-            <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
+            <span className="bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
               {" "}
               Companies
             </span>

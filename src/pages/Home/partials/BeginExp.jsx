@@ -5,16 +5,16 @@ import { fadeInLeft, fadeInRight } from "@/helpers/framerMotionHelper";
 
 const beginExpData = [
   {
-    title: "Hire the right Candidate with Nanba",
+    title: "Hire the right Candidate with Nanba Jobs",
     img: "hire-candidate.png",
-    bg: "bg-[#EC1563]",
+    bg: "bg-[#0252F8]",
     btnText: "Hire A Talent",
     resumeBuilder: false,
   },
   {
     title: "Free Service, We will build your resume",
     img: "build-resume.png",
-    bg: "bg-[#F4891F]",
+    bg: "bg-[#0252F8]",
     btnText: "Reach Out",
     resumeBuilder: true,
   },
@@ -26,17 +26,17 @@ const BeginExp = () => {
       <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 overflow-hidden">
         <h2 className="text-3xl font-semibold text-center">
           Begin your
-          <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
+          <span className="bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
             {" "}
-            Nanba{" "}
+            Nanba Jobs{" "}
           </span>
           Experience Today!
         </h2>
         <h3 className="text-center text-lg text-gray-400 mt-3 max-w-4xl mx-auto">
           Start your journey with us today and discover a world of seamless
           staffing solutions tailored to your needs. From skilled workers to
-          project-based hires, Nanba is your partner in success. Join us now and
-          experience the difference!
+          project-based hires, Nanba Jobs is your partner in success. Join us
+          now and experience the difference!
         </h3>
         <div className="grid grid-cols-12 gap-y-10 sm:gap-10 mt-20">
           {beginExpData.map((data, i) => (
@@ -54,7 +54,7 @@ const BeginExp = () => {
                   modalTrigger={
                     <Button
                       asChild
-                      className="bg-white text-[#F4891F] hover:bg-white/90"
+                      className="bg-white text-primary hover:bg-white/90"
                     >
                       <span>{data.btnText}</span>
                     </Button>

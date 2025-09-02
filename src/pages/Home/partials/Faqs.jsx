@@ -9,24 +9,24 @@ import { fadeInLeft, fadeInRight } from "@/helpers/framerMotionHelper";
 
 const faqsData = [
   {
-    que: "What types of workers can I hire through Nanba?",
-    ans: "Nanba caters to a wide range of industries and job roles, including engineers, welders, machine operators, electricians, and more. Whether you're in construction, manufacturing, hospitality, or any other sector, Nanba has the talent you need.",
+    que: "What types of workers can I hire through Nanba Jobs?",
+    ans: "Nanba Jobs caters to a wide range of industries and job roles, including engineers, welders, machine operators, electricians, and more. Whether you're in construction, manufacturing, hospitality, or any other sector, Nanba Jobs has the talent you need.",
   },
   {
-    que: "Is Nanba only for businesses?",
-    ans: "While Nanba primarily serves businesses looking to hire skilled workers, it also benefits workers by providing them with verified opportunities from reputable businesses. This ensures greater security and peace of mind throughout the hiring process.",
+    que: "Is Nanba Jobs only for businesses?",
+    ans: "While Nanba Jobs primarily serves businesses looking to hire skilled workers, it also benefits workers by providing them with verified opportunities from reputable businesses. This ensures greater security and peace of mind throughout the hiring process.",
   },
   {
-    que: "How much does it cost to use Nanba?",
-    ans: "Nanba offers cost-effective solutions for hiring, helping you save on recruitment and advertising expenses. Our pricing plans are flexible and tailored to suit your specific hiring needs. Contact us to learn more about our pricing options.",
+    que: "How much does it cost to use Nanba Jobs?",
+    ans: "Nanba Jobs offers cost-effective solutions for hiring, helping you save on recruitment and advertising expenses. Our pricing plans are flexible and tailored to suit your specific hiring needs. Contact us to learn more about our pricing options.",
   },
   {
-    que: "Can I see examples of Nanba's clients?",
-    ans: "Yes, we're proud to have served a diverse range of clients across various industries. You can view a list of Nanba's clients on our website to see the breadth of our expertise and success in connecting businesses with skilled workers.",
+    que: "Can I see examples of Nanba Jobs's clients?",
+    ans: "Yes, we're proud to have served a diverse range of clients across various industries. You can view a list of Nanba Jobs's clients on our website to see the breadth of our expertise and success in connecting businesses with skilled workers.",
   },
   {
-    que: "How do I get started with Nanba?",
-    ans: "Getting started with Nanba is easy. Simply visit our website, submit your hiring requirements, and let us take care of the rest. Our user-friendly platform ensures a seamless experience from start to finish.",
+    que: "How do I get started with Nanba Jobs?",
+    ans: "Getting started with Nanba Jobs is easy. Simply visit our website, submit your hiring requirements, and let us take care of the rest. Our user-friendly platform ensures a seamless experience from start to finish.",
   },
 ];
 
@@ -43,7 +43,7 @@ const Faqs = () => {
           >
             <h2 className="text-3xl font-semibold mb-5">
               Frequently Asked{" "}
-              <span className="bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
+              <span className="bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
                 {" "}
                 Questions
               </span>
