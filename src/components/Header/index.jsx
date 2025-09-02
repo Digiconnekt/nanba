@@ -10,11 +10,15 @@ const index = () => {
         <div className="mx-auto max-w-screen-xl px-4 py-2 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
-              <NavLink to={"/"} className={"flex items-center"}>
-                <img src="../../../images/logo.png" alt="Nanba" />
-                <span className="text-3xl sm:text-4xl mt-1 font-semibold bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
-                  Nanba
-                </span>
+              <NavLink
+                to={"/"}
+                className={"flex items-center max-w-[150px] w-full h-[70px]"}
+              >
+                <img
+                  src="/images/nanba-logo.png"
+                  alt="Nanba"
+                  className="w-full h-full mix-blend-multiply"
+                />
               </NavLink>
             </div>
 

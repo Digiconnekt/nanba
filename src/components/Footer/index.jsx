@@ -37,11 +37,15 @@ const index = () => {
           <div className="grid grid-cols-12 gap-y-8 md:gap-8">
             <div className="col-span-12 md:col-span-12 lg:col-span-6">
               <div className="flex justify-center text-teal-600 sm:justify-start">
-                <NavLink to={"/"} className={"flex items-center"}>
-                  <img src="../../../images/logo.png" alt="Nanba" />
-                  <span className="text-4xl mt-1 font-semibold bg-gradient-to-br from-primary to-[#FCAE53] text-transparent bg-clip-text">
-                    Nanba
-                  </span>
+                <NavLink
+                  to={"/"}
+                  className={"flex items-center max-w-[100px] w-full"}
+                >
+                  <img
+                    src="/images/nanba-logo.png"
+                    alt="Nanba"
+                    className="w-full h-full mix-blend-multiply"
+                  />
                 </NavLink>
               </div>
 
