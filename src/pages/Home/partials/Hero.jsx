@@ -49,11 +49,11 @@ const Hero = () => {
               initial="hidden"
               whileInView="visible"
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
+              <h1 className="text-5xl md:text-7xl font-bold bg-brand-gradient text-transparent bg-clip-text">
                 Nanba Jobs
               </h1>
 
-              <p className="mt-4 text-2xl text-gray-600">
+              <p className="mt-4 text-2xl text-neutral-medium">
                 Quickly connect with skilled workers,
                 <br /> ready to work
               </p>

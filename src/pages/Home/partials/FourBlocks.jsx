@@ -49,16 +49,16 @@ const FourBlocks = () => {
                     alt={data.title}
                   />
                 </figure>
-                <h2 className="mt-3 mb-2 text-xl font-semibold">
+                <h2 className="mt-3 mb-2 text-xl font-semibold text-neutral-dark">
                   {data.title}
                 </h2>
-                <p className="text-md text-gray-500">{data.desc}</p>
+                <p className="text-md text-neutral-medium">{data.desc}</p>
               </div>
               <HireTalentModal
                 selectedCategory={selectedCategory}
                 modalTrigger={
                   <p
-                    className="mt-3 text-secondary text-sm flex items-center hover:font-semibold transition-all ease-in-out"
+                    className="mt-3 text-primary text-sm flex items-center hover:font-semibold transition-all ease-in-out"
                     onClick={() => setSelectedCategory(data.title)}
                   >
                     Submit requirement

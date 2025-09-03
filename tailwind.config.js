@@ -23,25 +23,57 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Brand Primary Colors
         primary: {
-          DEFAULT: "#0252F8",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#E94057", // Primary Pink
+          pink: "#E94057",
+          orange: "#F27121",
+          foreground: "#FFFFFF",
+          hover: "#C72E46",
         },
+        // Brand Secondary Colors
         secondary: {
-          DEFAULT: "#87D4FE",
+          DEFAULT: "#FF6F91", // Secondary Light Pink
+          pink: "#FF6F91",
+          orange: "#FFA07A",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        // Neutral Colors
+        neutral: {
+          dark: "#4A4A4A", // Dark Gray for headings
+          medium: "#555555", // Medium Gray for sub-labels
+          light: "#F7F7F7", // Light Gray for background blocks
+          white: "#FFFFFF",
+        },
+        // Button Colors
+        button: {
+          primary: {
+            bg: "#E94057",
+            text: "#FFFFFF",
+            hover: "#C72E46",
+          },
+          secondary: {
+            border: "#E94057",
+            text: "#E94057",
+            hover: "#FFF0F3",
+          },
+        },
+        // Accent Colors
+        accent: {
+          success: "#28A745",
+          warning: "#FFC107",
+          error: "#DC3545",
+          info: "#007BFF",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
+          DEFAULT: "#DC3545",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -51,6 +83,9 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        "brand-gradient": "linear-gradient(90deg, #E94057 0%, #F27121 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",

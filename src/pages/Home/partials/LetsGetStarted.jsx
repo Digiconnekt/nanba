@@ -8,7 +8,7 @@ import { fadeInLeft } from "@/helpers/framerMotionHelper";
 const LetsGetStarted = () => {
   return (
     <>
-      <section className="bg-[#E6F2F1] overflow-hidden">
+      <section className="bg-neutral-light overflow-hidden">
         <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <motion.div
             className="md:max-w-md text-center md:text-left"
@@ -16,7 +16,7 @@ const LetsGetStarted = () => {
             initial="hidden"
             whileInView="visible"
           >
-            <h2 className="text-3xl font-semibold text-black mb-3">
+            <h2 className="text-3xl font-semibold text-neutral-dark mb-3">
               Let's Get Started!
             </h2>
             <Button asChild>

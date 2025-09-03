@@ -55,7 +55,7 @@ const FormAndMap = () => {
   return (
     <>
       <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-24 overflow-hidden">
-        <h2 className="text-3xl font-semibold text-center text-gray-800">
+        <h2 className="text-3xl font-semibold text-center text-neutral-dark">
           Have Some Questions?
         </h2>
 

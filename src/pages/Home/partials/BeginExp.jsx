@@ -7,14 +7,14 @@ const beginExpData = [
   {
     title: "Hire the right Candidate with Nanba Jobs",
     img: "hire-candidate.png",
-    bg: "bg-[#0252F8]",
+    bg: "bg-[#E94057]",
     btnText: "Hire A Talent",
     resumeBuilder: false,
   },
   {
     title: "Free Service, We will build your resume",
     img: "build-resume.png",
-    bg: "bg-[#0252F8]",
+    bg: "bg-[#FF6F91]",
     btnText: "Reach Out",
     resumeBuilder: true,
   },

@@ -56,9 +56,9 @@ const Benefits = () => {
             whileInView="visible"
           >
             <div className="bg-white rounded-2xl max-w-5xl xl:max-w-screen-xl mx-auto p-10">
-              <h2 className="text-3xl font-semibold text-center mb-5">
+              <h2 className="text-3xl font-semibold text-center mb-5 text-neutral-dark">
                 Benefits Of
-                <span className="bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
+                <span className="bg-brand-gradient text-transparent bg-clip-text">
                   {" "}
                   Nanba Jobs
                 </span>
@@ -77,11 +77,13 @@ const Benefits = () => {
                         <li key={i} className="mb-5">
                           <div className="flex items-center gap-x-2 mb-2">
                             <CircleCheck className="text-primary" size={22} />
-                            <p className="text-lg font-semibold">
+                            <p className="text-lg font-semibold text-neutral-dark">
                               {data.title}
                             </p>
                           </div>
-                          <p className="text-md text-gray-500">{data.desc}</p>
+                          <p className="text-md text-neutral-medium">
+                            {data.desc}
+                          </p>
                         </li>
                       ))}
                     </ul>
@@ -100,11 +102,13 @@ const Benefits = () => {
                         <li key={i} className="mb-5">
                           <div className="flex items-center gap-x-2 mb-2">
                             <CircleCheck className="text-primary" size={22} />
-                            <p className="text-lg font-semibold">
+                            <p className="text-lg font-semibold text-neutral-dark">
                               {data.title}
                             </p>
                           </div>
-                          <p className="text-md text-gray-500">{data.desc}</p>
+                          <p className="text-md text-neutral-medium">
+                            {data.desc}
+                          </p>
                         </li>
                       ))}
                     </ul>

@@ -140,7 +140,7 @@ const SubmitResumeModal = () => {
             />
           </div>
           <span>
-            <Button asChild variant="outline">
+            <Button asChild variant="secondary">
               <span>Submit Resume</span>
             </Button>
           </span>
