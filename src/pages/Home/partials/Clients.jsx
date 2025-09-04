@@ -8,9 +8,6 @@ const companiesData = [
     logo: "1.png",
   },
   {
-    logo: "2.png",
-  },
-  {
     logo: "3.png",
   },
   {
@@ -20,16 +17,25 @@ const companiesData = [
     logo: "5.png",
   },
   {
-    logo: "6.png",
-  },
-  {
-    logo: "7.png",
-  },
-  {
     logo: "8.png",
   },
   {
     logo: "9.png",
+  },
+  {
+    logo: "garage.jpeg",
+  },
+  {
+    logo: "kursii.jpeg",
+  },
+  {
+    logo: "my-promo-videos.jpeg",
+  },
+  {
+    logo: "paal.jpeg",
+  },
+  {
+    logo: "zoca.jpeg",
   },
 ];
 
